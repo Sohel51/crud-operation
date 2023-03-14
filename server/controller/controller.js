@@ -20,8 +20,7 @@ exports.create = (req,res)=>{
     user
         .save(user)
         .then(data => {
-            //res.send(data)
-            res.redirect('/add-user');
+            res.send(data)
         })
         .catch(err =>{
             res.status(500).send({
